@@ -114,6 +114,7 @@
             enableKeyMapping = true;
             remapCapsLockToControl = true;
           };
+          system.primaryUser = "gc";
           networking = {
             computerName = "mba";
             hostName = "mba";
@@ -123,7 +124,13 @@
             onActivation.cleanup = "uninstall";
             taps = [ ];
             brews = [
+              "autoconf"
               "batt"
+              "gmp"
+              "libyaml"
+              "openssl@3"
+              "readline"
+              "rust"
             ];
             casks = [
               "1Password" # Must be install in /Applications, so cannot use nixpkgs
@@ -196,6 +203,7 @@
               fd
               fzf
               gh
+              gimp
               google-chrome
               hey
               ice-bar
