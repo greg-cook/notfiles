@@ -14,12 +14,11 @@
         "git"
         "terraform"
       ];
-      # theme = "robbyrussell";
     };
     shellAliases = {
       bb = "docker run -it --rm --mount type=bind,source=\"$HOME/tmp/.bitbucket-rest-cli-config.json\",target=/root/.bitbucket-rest-cli-config.json --mount type=bind,source=\"$(pwd)\",target=/workdir,readonly ghcr.io/bb-cli/bb-cli";
       cat = "bat";
-      ide = "zed .";
+      ide = "zed-preview .";
       lg = "lazygit";
       switch = "sudo darwin-rebuild switch --flake ~/code/personal/notfiles#${hostConfig.key}";
       watch = "watch ";
@@ -37,10 +36,6 @@
       "ignoreSpace" = true;
       "share" = true;
     };
-    sessionVariables = {
-      AWS_PAGER = "";
-      BB_REPO_PATH = "/Users/${hostConfig.username}/projects";
-      PATH = "$PATH:/Users/${hostConfig.username}/.local/bin:$BB_REPO_PATH/dev-scripts";
-    };
+    sessionVariables = hostConfig.sessionVariables;
   };
 }
