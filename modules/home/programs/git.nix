@@ -6,6 +6,7 @@
     ignores = [
       ".vscode"
     ];
+    includes = hostConfig.gitIncludes;
     settings = {
       user = {
         email = hostConfig.email;

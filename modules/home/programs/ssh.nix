@@ -1,4 +1,4 @@
-{ hostConfig, ... }:
+{ lib, hostConfig, ... }:
 
 {
   programs.ssh = {
@@ -8,13 +8,15 @@
       "*" = {
         addKeysToAgent = "yes";
       };
-      "bitbucket" = {
-        host = "bitbucket.org";
-        identityFile = "~/.ssh/${hostConfig.sshKey}";
-      };
       "github" = {
         host = "github.com";
         identityFile = "~/.ssh/github_id_ed25519";
+      };
+    }
+    // lib.optionalAttrs (hostConfig.sshKey != null) {
+      "bitbucket" = {
+        host = "bitbucket.org";
+        identityFile = "~/.ssh/${hostConfig.sshKey}";
       };
     };
     extraConfig = ''

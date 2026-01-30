@@ -12,6 +12,19 @@
     gitSigningKey = "/Users/greg.cook/.ssh/MVFLP01840.pub";
     gitSigningProgram = null; # uses default (file-based)
     sshExtraConfig = "";
+    # Conditional git config for personal repos (path must end with /)
+    gitIncludes = [
+      {
+        condition = "gitdir:~/code/personal/";
+        contents = {
+          user = {
+            email = "5386965+greg-cook@users.noreply.github.com";
+            name = "Greg Cook";
+            signingkey = "/Users/greg.cook/.ssh/github_id_ed25519.pub";
+          };
+        };
+      }
+    ];
     # Machine-specific homebrew packages
     extraBrews = [ ];
     extraCasks = [ ];
@@ -20,7 +33,6 @@
     extraPackages =
       pkgs: with pkgs; [
         circleci-cli
-        google-cloud-sdk
         scalr-cli
       ];
   };
@@ -32,12 +44,13 @@
     user = "gc";
     name = "Greg Cook";
     email = "5386965+greg-cook@users.noreply.github.com";
-    sshKey = "github_id_ed25519";
+    sshKey = null;
     gitSigningKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK+VGSqIP96us62MMoKVsyAXOA/LVFnWOTJWjLqAU3Le";
     gitSigningProgram = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
     sshExtraConfig = ''
       IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
     '';
+    gitIncludes = [ ];
     extraBrews = [ ];
     extraCasks = [
       "1password"
