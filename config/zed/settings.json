@@ -1,0 +1,54 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "auto_install_extensions": {
+    "basher": true,
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "docker-compose": true,
+    "dockerfile": true,
+    "git-firefly": true,
+    "html": true,
+    "ini": true,
+    "lua": true,
+    "make": true,
+    "nix": true,
+    "php": true,
+    "python-requirements": true,
+    "rainbow-csv": true,
+    "ruby": true,
+    "sql": true,
+    "terraform": true,
+    "toml": true,
+  },
+  "icon_theme": {
+    "mode": "system",
+    "dark": "Catppuccin Macchiato",
+    "light": "Catppuccin Latte",
+  },
+  "agent": {
+    "button": true,
+    "model_parameters": [],
+  },
+  "terminal": {
+    "copy_on_select": true,
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
+  },
+  "close_on_file_delete": true,
+  "ensure_final_newline_on_save": true,
+  "scroll_beyond_last_line": "off",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+}
