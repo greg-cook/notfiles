@@ -5,21 +5,25 @@ Declarative macOS configuration using nix-darwin and home-manager.
 ## Setup
 
 1. Install Xcode command line tools
+
 ```sh
 xcode-select --install
 ```
 
-2. Install Nix with the [Determinate Systems installer](https://github.com/DeterminateSystems/nix-installer)
+2. Install Nix with [nix-installer](https://github.com/NixOS/nix-installer)
+
 ```sh
-curl -fsSL https://install.determinate.systems/nix | sh -s -- install
+curl -sSfL https://artifacts.nixos.org/nix-installer | sh -s -- install
 ```
 
 3. Bootstrap the system (replace `personal` with your host key from `hosts.nix`)
+
 ```sh
 nix run nix-darwin -- switch --flake github:greg-cook/notfiles#personal
 ```
 
 4. Rebuild after changes
+
 ```sh
 switch
 ```
