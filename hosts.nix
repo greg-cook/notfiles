@@ -72,6 +72,7 @@ in
       "microsoft-excel"
       "microsoft-word"
       "rustdesk"
+      "steam"
       "stremio"
       "surfshark"
       "windscribe"

@@ -29,7 +29,6 @@
       ripgrep
       ruby
       sslscan
-      ssm-session-manager-plugin
       tflint
       totp-cli
       treefmt
