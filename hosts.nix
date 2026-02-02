@@ -31,9 +31,14 @@ in
     # Machine-specific session variables
     sessionVariables = {
       AWS_PAGER = "";
-      BB_REPO_PATH = "~/projects";
-      PATH = "$PATH:~/.local/bin:$BB_REPO_PATH/dev-scripts";
+      BB_REPO_PATH = "$HOME/projects";
     };
+    # Additional PATH entries (added via home.sessionPath)
+    extraSessionPath = [ ];
+    # Extra shell init (for dynamic PATH entries, etc.)
+    extraZshInit = ''
+      export PATH="$PATH:$BB_REPO_PATH/dev-scripts"
+    '';
     # Machine-specific homebrew packages
     extraBrews = [ ];
     extraCasks = [ ];
@@ -64,6 +69,8 @@ in
     '';
     gitIncludes = [ ];
     sessionVariables = { };
+    extraSessionPath = [ ];
+    extraZshInit = "";
     extraBrews = [ ];
     extraCasks = [
       "1password"

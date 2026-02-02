@@ -37,5 +37,6 @@
       "share" = true;
     };
     sessionVariables = hostConfig.sessionVariables;
+    initExtra = hostConfig.extraZshInit;
   };
 }
