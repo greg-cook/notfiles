@@ -12,6 +12,7 @@
     brews = [
       # Install deps for ruby-build as it doesn't work with nixpkgs
       "autoconf"
+      "batt"
       "gmp"
       "libyaml"
       "openssl@3"
