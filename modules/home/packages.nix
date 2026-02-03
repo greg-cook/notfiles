@@ -8,7 +8,6 @@
   home.packages =
     with pkgs;
     [
-      claude-code
       fd
       fzf
       gh

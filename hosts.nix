@@ -49,7 +49,8 @@ in
         awscli2
         circleci-cli
         scalr-cli
-        ssm-session-manager-plugin
+        # TODO: Temp disable due to build issues
+        # ssm-session-manager-plugin
         tflint
       ];
   };
