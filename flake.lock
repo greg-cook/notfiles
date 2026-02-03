@@ -92,12 +92,29 @@
         "type": "github"
       }
     },
+    "nixpkgs-ssm-fix": {
+      "locked": {
+        "lastModified": 1770034869,
+        "narHash": "sha256-O581a3Bd2c0KcYiPplHd//YSbYl5GHL8mzSTiKVZZNQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9e43cba7180241606b1bc69bd40948aab68a9dc7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "pull/486268/head",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-ssm-fix": "nixpkgs-ssm-fix"
       }
     }
   },

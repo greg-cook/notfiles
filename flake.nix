@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    # PR #486268: fix ssm-session-manager-plugin build
+    nixpkgs-ssm-fix.url = "github:NixOS/nixpkgs/pull/486268/head";
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
@@ -14,12 +16,19 @@
     {
       self,
       nixpkgs,
+      nixpkgs-ssm-fix,
       nix-darwin,
       nix-homebrew,
       home-manager,
     }:
     let
       hosts = import ./hosts.nix;
+
+      # Overlay to pull packages from PR branches until they're merged
+      prOverlay = final: prev: {
+        ssm-session-manager-plugin =
+          (import nixpkgs-ssm-fix { system = prev.stdenv.hostPlatform.system; }).ssm-session-manager-plugin;
+      };
 
       # Helper function to create a darwin configuration for a host
       mkDarwinConfig =
@@ -32,6 +41,9 @@
         nix-darwin.lib.darwinSystem {
           specialArgs = { inherit hostConfig; };
           modules = [
+            # Apply overlays for PR fixes
+            { nixpkgs.overlays = [ prOverlay ]; }
+
             # Darwin system configuration
             (
               {
