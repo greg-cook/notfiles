@@ -4,7 +4,11 @@
   programs.claude-code = {
     enable = true;
     settings = {
-      includeCoAuthoredBy = false;
+      # Prevent claude adding itself to commits/prs
+      attribution = {
+        commit = "";
+        pr = "";
+      };
     };
   };
 }
