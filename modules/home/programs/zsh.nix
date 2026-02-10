@@ -12,6 +12,7 @@
       plugins = [
         "docker"
         "git"
+        "kubectl"
         "terraform"
       ];
     };
