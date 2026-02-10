@@ -9,6 +9,7 @@
         commit = "";
         pr = "";
       };
+      effortLevel = "medium";
     };
   };
 }
