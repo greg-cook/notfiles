@@ -48,6 +48,7 @@ in
       pkgs: with pkgs; [
         awscli2
         circleci-cli
+        golangci-lint
         scalr-cli
         ssm-session-manager-plugin # Uses PR #486268 overlay until merged
         tflint
