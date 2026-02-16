@@ -20,7 +20,6 @@
       bb = "docker run -it --rm --mount type=bind,source=\"$HOME/tmp/.bitbucket-rest-cli-config.json\",target=/root/.bitbucket-rest-cli-config.json --mount type=bind,source=\"$(pwd)\",target=/workdir,readonly ghcr.io/bb-cli/bb-cli";
       cat = "bat";
       ide = "zed-preview .";
-      lg = "lazygit";
       switch = "sudo darwin-rebuild switch --flake ~/code/personal/notfiles#${hostConfig.key}";
       watch = "watch ";
     };
