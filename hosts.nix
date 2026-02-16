@@ -78,6 +78,7 @@ in
       "google-chrome"
       "microsoft-excel"
       "microsoft-word"
+      "prusaslicer"
       "rustdesk"
       "steam"
       "stremio"
