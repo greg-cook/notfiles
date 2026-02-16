@@ -7,6 +7,8 @@
     globalConfig = {
       tools = {
         golang = "1.25";
+        helm = "4";
+        kubectl = "1.35";
         node = "22";
         python = "3";
         ruby = "3";
