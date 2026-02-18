@@ -37,7 +37,7 @@
         metrics = false;
       };
       terminal = {
-        copy-on-select = true;
+        copy_on_select = true;
       };
     };
   };
