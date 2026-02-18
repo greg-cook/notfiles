@@ -9,6 +9,7 @@
     ./neovim.nix
     ./other.nix
     ./ssh.nix
+    ./zed.nix
     ./zsh.nix
   ];
 }
