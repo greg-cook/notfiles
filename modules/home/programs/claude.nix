@@ -10,6 +10,7 @@
         pr = "";
       };
       effortLevel = "medium";
+      theme = "dark";
     };
   };
 }
