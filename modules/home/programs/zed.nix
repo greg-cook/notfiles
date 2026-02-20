@@ -27,6 +27,7 @@
       "terraform"
       "toml"
     ];
+    mutableUserSettings = false;
     package = null;
     userSettings = {
       close_on_file_delete = true;
