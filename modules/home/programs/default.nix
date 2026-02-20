@@ -7,6 +7,7 @@
     ./git.nix
     ./mise.nix
     ./neovim.nix
+    ./opencode.nix
     ./other.nix
     ./ssh.nix
     ./zed.nix

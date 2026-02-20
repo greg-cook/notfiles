@@ -19,6 +19,7 @@
       "lua"
       "make"
       "nix"
+      "opencode"
       "php"
       "python-requirements"
       "rainbow-csv"
