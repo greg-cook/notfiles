@@ -2,7 +2,7 @@ name: Update flake inputs
 
 on:
   schedule:
-    - cron: "0 9 * * 1" # Every Monday at 9am UTC
+    - cron: "14 0 * * *" # Everyday at 00:14 UTC
   workflow_dispatch:
 
 permissions:
