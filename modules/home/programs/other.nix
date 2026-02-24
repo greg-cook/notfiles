@@ -28,6 +28,12 @@
         markEmptyLines = true;
       };
     };
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      enableBashIntegration = true;
+      nix-direnv.enable = true;
+    };
     eza = {
       enable = true;
       enableZshIntegration = true;

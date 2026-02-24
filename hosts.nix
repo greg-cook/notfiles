@@ -82,6 +82,7 @@ in
       "microsoft-word"
       "prusaslicer"
       "rustdesk"
+      "slack"
       "steam"
       "stremio"
       "surfshark"
