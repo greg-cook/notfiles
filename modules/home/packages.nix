@@ -9,6 +9,7 @@
     with pkgs;
     [
       awscli2
+      e1s
       fd
       fzf
       gh
@@ -20,6 +21,7 @@
       python3
       ripgrep
       ruby
+      shellcheck
       sslscan
       uv
       wakeonlan
