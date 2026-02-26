@@ -12,9 +12,9 @@
       fd
       fzf
       gh
+      mariadb.client
       mise
       mkcert
-      mariadb.client
       nil
       openssl
       python3
