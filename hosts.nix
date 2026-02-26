@@ -46,7 +46,6 @@ in
     # Machine-specific nix packages (function that takes pkgs)
     extraPackages =
       pkgs: with pkgs; [
-        awscli2
         circleci-cli
         golangci-lint
         scalr-cli
