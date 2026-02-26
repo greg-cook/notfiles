@@ -20,11 +20,11 @@
     ]
     ++ hostConfig.extraBrews;
     casks = [
-      "docker-desktop"
       "ghostty@tip"
       "jordanbaird-ice"
       "logi-options+"
       "obsidian"
+      "orbstack"
       "rectangle"
       "stats"
       "zed@preview"
