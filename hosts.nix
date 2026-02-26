@@ -38,6 +38,7 @@ in
     # Extra shell init (for dynamic PATH entries, etc.)
     extraZshInit = ''
       export PATH="$PATH:$BB_REPO_PATH/dev-scripts"
+      eval "$(mvf config aliases)"
     '';
     # Machine-specific homebrew packages
     extraBrews = [ ];
