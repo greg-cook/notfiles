@@ -29,6 +29,10 @@ in
       }
     ];
     # Machine-specific session variables
+    awsConfig = {
+      region = "eu-west-1";
+      output = "json";
+    };
     sessionVariables = {
       AWS_PAGER = "";
       BB_REPO_PATH = "$HOME/projects";
@@ -70,6 +74,10 @@ in
       IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
     '';
     gitIncludes = [ ];
+    awsConfig = {
+      region = "us-east-1";
+      output = "table";
+    };
     sessionVariables = { };
     extraSessionPath = [ ];
     extraZshInit = "";

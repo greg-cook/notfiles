@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./awscli.nix
     ./claude.nix
     ./ghostty.nix
     ./git.nix
