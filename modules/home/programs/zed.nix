@@ -9,8 +9,6 @@
     enable = true;
     extensions = [
       "basher"
-      "catppuccin"
-      "catppuccin-icons"
       "docker-compose"
       "dockerfile"
       "git-firefly"
@@ -19,6 +17,7 @@
       "lua"
       "make"
       "nix"
+      "nord"
       "opencode"
       "php"
       "python-requirements"
@@ -41,6 +40,7 @@
       terminal = {
         copy_on_select = true;
       };
+      theme = "nord";
     };
   };
 }

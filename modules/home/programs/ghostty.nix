@@ -5,7 +5,7 @@
     enable = true;
     package = null;
     settings = {
-      theme = "Catppuccin Mocha";
+      theme = "Nord";
       copy-on-select = "clipboard";
     };
   };
