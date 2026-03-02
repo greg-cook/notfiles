@@ -7,7 +7,7 @@
     ./ghostty.nix
     ./git.nix
     ./mise.nix
-    ./neovim.nix
+    ./helix.nix
     ./opencode.nix
     ./other.nix
     ./ssh.nix
