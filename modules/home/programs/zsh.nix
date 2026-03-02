@@ -13,6 +13,7 @@
         "docker"
         "git"
         "kubectl"
+        "opentofu"
         "terraform"
       ];
     };
