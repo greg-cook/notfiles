@@ -5,7 +5,6 @@
     ./claude.nix
     ./ghostty.nix
     ./git.nix
-    ./mise.nix
     ./helix.nix
     ./opencode.nix
     ./other.nix

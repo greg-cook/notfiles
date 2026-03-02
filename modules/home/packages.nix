@@ -14,13 +14,10 @@
       fzf
       gh
       mariadb.client
-      mise
       mkcert
       nil
       openssl
-      python3
       ripgrep
-      ruby
       shellcheck
       sslscan
       uv
