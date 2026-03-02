@@ -16,6 +16,7 @@
     casks = [
       "ghostty@tip"
       "jordanbaird-ice"
+      "karabiner-elements"
       "logi-options+"
       "obsidian"
       "orbstack"
