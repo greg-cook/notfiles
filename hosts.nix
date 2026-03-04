@@ -80,6 +80,7 @@ in
       "google-chrome"
       "microsoft-excel"
       "microsoft-word"
+      "moonlight"
       "prusaslicer"
       "rustdesk"
       "slack"
