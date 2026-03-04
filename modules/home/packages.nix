@@ -20,6 +20,7 @@
       ripgrep
       shellcheck
       sslscan
+      tart
       uv
       wakeonlan
       watch
