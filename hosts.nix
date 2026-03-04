@@ -76,7 +76,6 @@ in
     extraBrews = [ ];
     extraCasks = [
       "1password"
-      "adobe-acrobat-reader"
       "altserver"
       "google-chrome"
       "microsoft-excel"

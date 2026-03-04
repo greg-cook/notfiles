@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   programs = {
@@ -19,25 +19,27 @@
     };
     direnv = {
       enable = true;
-      enableZshIntegration = true;
       enableBashIntegration = true;
+      enableZshIntegration = true;
       nix-direnv.enable = true;
     };
     eza = {
       enable = true;
+      enableBashIntegration = true;
       enableZshIntegration = true;
       icons = "auto";
     };
     home-manager.enable = true;
-    lazydocker.enable = true;
     lazygit.enable = true;
     mr.enable = true;
     starship = {
       enable = true;
+      enableBashIntegration = true;
       enableZshIntegration = true;
     };
     zoxide = {
       enable = true;
+      enableBashIntegration = true;
       enableZshIntegration = true;
     };
   };

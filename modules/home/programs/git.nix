@@ -3,9 +3,6 @@
 {
   programs.git = {
     enable = true;
-    ignores = [
-      ".vscode"
-    ];
     includes = hostConfig.gitIncludes;
     settings = {
       user = {

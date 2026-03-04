@@ -1,8 +1,4 @@
-{
-  config,
-  hostConfig,
-  ...
-}:
+{ ... }:
 
 {
   programs.zed-editor = {

@@ -6,7 +6,6 @@
     ./ghostty.nix
     ./git.nix
     ./helix.nix
-    ./opencode.nix
     ./other.nix
     ./ssh.nix
     ./zed.nix

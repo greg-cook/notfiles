@@ -1,4 +1,4 @@
-{ lib, hostConfig, ... }:
+{ ... }:
 
 {
   programs.claude-code = {
