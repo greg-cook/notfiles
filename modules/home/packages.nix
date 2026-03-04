@@ -16,6 +16,8 @@
       mariadb.client
       mkcert
       nil
+      nodejs
+      nodePackages.pnpm
       openssl
       ripgrep
       shellcheck
