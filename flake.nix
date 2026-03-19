@@ -8,6 +8,7 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-terraform.url = "github:stackbuilders/nixpkgs-terraform";
   };
 
   outputs =
@@ -17,6 +18,7 @@
       nix-darwin,
       nix-homebrew,
       home-manager,
+      nixpkgs-terraform,
     }:
     let
       hosts = import ./hosts.nix;
@@ -59,7 +61,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 verbose = true;
-                extraSpecialArgs = { inherit hostConfig; };
+                extraSpecialArgs = { inherit hostConfig nixpkgs-terraform; };
                 users.${hostConfig.user} = (
                   {
                     pkgs,

@@ -5,6 +5,7 @@
     enable = true;
     extensions = [
       "basher"
+      "claude-acp"
       "docker-compose"
       "dockerfile"
       "git-firefly"

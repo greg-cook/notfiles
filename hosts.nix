@@ -52,7 +52,6 @@ in
         goreleaser
         scalr-cli
         ssm-session-manager-plugin # Uses PR #486268 overlay until merged
-        tflint
       ];
   };
 
