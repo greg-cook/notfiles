@@ -20,7 +20,7 @@
     };
     shellAliases = {
       cat = "bat";
-      ide = "zed-preview .";
+      ide = "zed .";
       switch = "sudo darwin-rebuild switch --flake ~/code/personal/notfiles#${hostConfig.key}";
       watch = "watch ";
     };

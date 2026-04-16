@@ -15,15 +15,15 @@
     ++ hostConfig.extraBrews;
     casks = [
       "betterdisplay"
-      "ghostty@tip"
-      "jordanbaird-ice"
+      "ghostty"
       "karabiner-elements"
       "logi-options+"
       "obsidian"
       "orbstack"
       "rectangle"
       "stats"
-      "zed@preview"
+      "thaw"
+      "zed"
       "zoom"
     ]
     ++ hostConfig.extraCasks;

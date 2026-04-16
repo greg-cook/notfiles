@@ -11,7 +11,6 @@
     [
       awscli2
       e1s
-      devenv
       fd
       fzf
       gh
@@ -22,7 +21,7 @@
       neovim
       nil
       nodejs
-      nodePackages.pnpm
+      pnpm
       openssl
       pre-commit
       ripgrep
