@@ -14,6 +14,7 @@
       fd
       fzf
       gh
+      gnupg
       go
       kubernetes-helm
       mariadb.client

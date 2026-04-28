@@ -4,6 +4,16 @@
   programs.claude-code = {
     enable = true;
     mcpServers = {
+      github = {
+        command = "${pkgs.github-mcp-server}/bin/github-mcp-server";
+        args = [ "stdio" ];
+        type = "stdio";
+      };
+      nix = {
+        command = "${pkgs.uv}/bin/uvx";
+        args = [ "mcp-nixos" ];
+        type = "stdio";
+      };
       aws-mcp = {
         command = "${pkgs.uv}/bin/uvx";
         args = [
@@ -22,6 +32,7 @@
         pr = "";
       };
       effortLevel = "medium";
+      model = "claude-opus-4-5";
       theme = "dark";
     };
   };
