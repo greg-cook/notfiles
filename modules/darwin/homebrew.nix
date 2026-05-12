@@ -14,6 +14,7 @@
     ]
     ++ hostConfig.extraBrews;
     casks = [
+      "1password"
       "betterdisplay"
       "ghostty"
       "karabiner-elements"

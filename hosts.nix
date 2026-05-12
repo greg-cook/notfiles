@@ -74,7 +74,6 @@ in
     extraZshInit = "";
     extraBrews = [ ];
     extraCasks = [
-      "1password"
       "altserver"
       "google-chrome"
       "microsoft-excel"
@@ -91,9 +90,6 @@ in
     extraMasApps = {
       "1Password for Safari" = 1569813296;
     };
-    extraPackages =
-      pkgs: with pkgs; [
-        _1password-cli
-      ];
+    extraPackages = pkgs: [ ];
   };
 }
