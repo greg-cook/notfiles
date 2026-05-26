@@ -4,19 +4,17 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks = {
+    settings = {
       "*" = {
-        addKeysToAgent = "yes";
+        AddKeysToAgent = "yes";
       };
-      "github" = {
-        host = "github.com";
-        identityFile = "~/.ssh/github_id_ed25519";
+      "github.com" = {
+        IdentityFile = "~/.ssh/github_id_ed25519";
       };
     }
     // lib.optionalAttrs (hostConfig.sshKey != null) {
-      "bitbucket" = {
-        host = "bitbucket.org";
-        identityFile = "~/.ssh/${hostConfig.sshKey}";
+      "bitbucket.org" = {
+        IdentityFile = "~/.ssh/${hostConfig.sshKey}";
       };
     };
     extraConfig = ''

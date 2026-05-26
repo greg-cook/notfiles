@@ -33,6 +33,7 @@
       tart
       nixpkgs-terraform.packages.${pkgs.stdenv.hostPlatform.system}."terraform-1.5.7"
       bitbucket-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
+      terraform-docs
       tflint
       tflint-plugins.tflint-ruleset-aws
       uv

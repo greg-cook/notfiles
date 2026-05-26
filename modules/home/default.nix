@@ -13,6 +13,7 @@
   home = {
     homeDirectory = "/Users/${hostConfig.username}";
     stateVersion = "25.05";
+    enableNixpkgsReleaseCheck = false;
     shell.enableZshIntegration = true;
     sessionPath = [ "$HOME/.local/bin" ] ++ hostConfig.extraSessionPath;
   };
