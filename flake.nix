@@ -9,6 +9,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-terraform.url = "github:stackbuilders/nixpkgs-terraform";
+    nixpkgs-terraform-docs.url = "github:NixOS/nixpkgs/b86751bc4085f48661017fa226dee99fab6c651b";
     bitbucket-cli.url = "github:avivsinai/bitbucket-cli";
     bitbucket-cli.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -21,6 +22,7 @@
       nix-homebrew,
       home-manager,
       nixpkgs-terraform,
+      nixpkgs-terraform-docs,
       bitbucket-cli,
     }:
     let
@@ -64,7 +66,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 verbose = true;
-                extraSpecialArgs = { inherit hostConfig nixpkgs-terraform bitbucket-cli; };
+                extraSpecialArgs = { inherit hostConfig nixpkgs-terraform nixpkgs-terraform-docs bitbucket-cli; };
                 users.${hostConfig.user} = (
                   {
                     pkgs,
