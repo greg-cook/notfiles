@@ -37,18 +37,7 @@
         pr = "";
       };
       effortLevel = "medium";
-      theme = "dark";
-      enabledPlugins = {
-        "bkt@avivsinai-marketplace" = true;
-      };
-      extraKnownMarketplaces = {
-        avivsinai-marketplace = {
-          source = {
-            source = "github";
-            repo = "avivsinai/skills-marketplace";
-          };
-        };
-      };
+      theme = "auto";
     };
   };
 }
