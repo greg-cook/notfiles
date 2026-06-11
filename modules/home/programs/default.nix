@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./claude.nix
+    ./claude-code.nix
     ./ghostty.nix
     ./git.nix
     ./karabiner.nix
