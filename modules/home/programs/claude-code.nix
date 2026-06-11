@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, hostConfig, lib, ... }:
 
+let
+  isWork = lib.hasSuffix "@mvfglobal.com" hostConfig.email;
+in
 {
   programs.claude-code = {
     enable = true;
@@ -30,54 +33,77 @@
         type = "stdio";
       };
     };
-    rules = {
-      git-workflow = ''
-        ---
-        alwaysApply: true
-        ---
+    rules = lib.mkMerge [
+      {
+        git-workflow = ''
+          ---
+          alwaysApply: true
+          ---
 
-        # Git Workflow
+          # Git Workflow
 
-        Before starting any implementation work:
+          Before starting any implementation work:
 
-        1. Identify the default branch with `git remote show origin | grep 'HEAD branch'`
-        2. Fetch latest: `git fetch origin`
-        3. Create and switch to a new branch from the tip of the default branch:
-           `git checkout -b <branch-name> origin/<default-branch>`
+          1. Identify the default branch with `git remote show origin | grep 'HEAD branch'`
+          2. Fetch latest: `git fetch origin`
+          3. Create and switch to a new branch from the tip of the default branch:
+             `git checkout -b <branch-name> origin/<default-branch>`
 
-        Branch names should reflect the type of work using the same prefixes as conventional commits:
-        `feat/`, `fix/`, `docs/`, `refactor/`, `chore/`, `ci/`, `perf/`, `test/`
-        followed by a short kebab-case description, e.g. `feat/add-login-page`.
+          Branch names should reflect the type of work using the same prefixes as conventional commits:
+          `feat/`, `fix/`, `docs/`, `refactor/`, `chore/`, `ci/`, `perf/`, `test/`
+          followed by a short kebab-case description, e.g. `feat/add-login-page`.
 
-        Never commit directly to the default branch.
-      '';
+          Never commit directly to the default branch.
+        '';
 
-      conventional-commits = ''
-        ---
-        alwaysApply: true
-        ---
+        conventional-commits = ''
+          ---
+          alwaysApply: true
+          ---
 
-        # Conventional Commits
+          # Conventional Commits
 
-        All commits must follow the Conventional Commits specification:
+          All commits must follow the Conventional Commits specification:
 
-        ```
-        <type>[(scope)][!]: <description>
+          ```
+          <type>[(scope)][!]: <description>
 
-        [optional body]
+          [optional body]
 
-        [optional footer(s)]
-        ```
+          [optional footer(s)]
+          ```
 
-        Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`, `build`, `revert`
+          Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`, `build`, `revert`
 
-        Rules:
-        - Description is lowercase, imperative mood, no trailing period, max 72 chars total
-        - Use `!` after type/scope or `BREAKING CHANGE:` footer for breaking changes
-        - Scope is optional but encouraged when the change is localized (e.g. `fix(auth): ...`)
-        - Body and footers are separated from the subject by a blank line
-      '';
-    };
+          Rules:
+          - Description is lowercase, imperative mood, no trailing period, max 72 chars total
+          - Use `!` after type/scope or `BREAKING CHANGE:` footer for breaking changes
+          - Scope is optional but encouraged when the change is localized (e.g. `fix(auth): ...`)
+          - Body and footers are separated from the subject by a blank line
+        '';
+      }
+
+      (lib.mkIf isWork {
+        tickets = ''
+          ---
+          alwaysApply: true
+          ---
+
+          # Ticket References
+
+          All work is tied to a ticket. Ticket numbers follow the pattern `[A-Z]+-[0-9]+`, e.g. `FAL-123`, `DEV-456`.
+
+          If you are about to create a branch, open a PR, or start implementation and the ticket number
+          has not been provided, ask the user: "What's the ticket number for this work?"
+
+          Once known, apply the ticket number consistently:
+          - **Branch names**: prefix after the type, e.g. `feat/FAL-123-short-description`
+          - **PR description**: prepend the ticket as a reference on the first line, e.g. `FAL-123`
+
+          Do not ask again once the ticket number has been given in the current session.
+        '';
+      })
+    ];
 
     commands = {
       rebase = ''
