@@ -21,7 +21,7 @@
     shellAliases = {
       cat = "bat";
       ide = "zed .";
-      switch = "sudo darwin-rebuild switch --flake ~/code/personal/notfiles#${hostConfig.key}";
+      switch = "sudo darwin-rebuild switch --flake ~/code/personal/notfiles#${hostConfig.key} && launchctl kickstart -k gui/$(id -u)/com.apple.Dock.agent";
       watch = "watch ";
     };
     autocd = true;
