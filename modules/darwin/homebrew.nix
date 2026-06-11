@@ -16,6 +16,8 @@
     casks = [
       "1password"
       "betterdisplay"
+      "claude"
+      "claude-code"
       "claudebar"
       "ghostty"
       "karabiner-elements"
