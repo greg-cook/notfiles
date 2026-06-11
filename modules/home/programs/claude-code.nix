@@ -30,6 +30,55 @@
         type = "stdio";
       };
     };
+    rules = {
+      git-workflow = ''
+        ---
+        alwaysApply: true
+        ---
+
+        # Git Workflow
+
+        Before starting any implementation work:
+
+        1. Identify the default branch with `git remote show origin | grep 'HEAD branch'`
+        2. Fetch latest: `git fetch origin`
+        3. Create and switch to a new branch from the tip of the default branch:
+           `git checkout -b <branch-name> origin/<default-branch>`
+
+        Branch names should reflect the type of work using the same prefixes as conventional commits:
+        `feat/`, `fix/`, `docs/`, `refactor/`, `chore/`, `ci/`, `perf/`, `test/`
+        followed by a short kebab-case description, e.g. `feat/add-login-page`.
+
+        Never commit directly to the default branch.
+      '';
+
+      conventional-commits = ''
+        ---
+        alwaysApply: true
+        ---
+
+        # Conventional Commits
+
+        All commits must follow the Conventional Commits specification:
+
+        ```
+        <type>[(scope)][!]: <description>
+
+        [optional body]
+
+        [optional footer(s)]
+        ```
+
+        Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`, `build`, `revert`
+
+        Rules:
+        - Description is lowercase, imperative mood, no trailing period, max 72 chars total
+        - Use `!` after type/scope or `BREAKING CHANGE:` footer for breaking changes
+        - Scope is optional but encouraged when the change is localized (e.g. `fix(auth): ...`)
+        - Body and footers are separated from the subject by a blank line
+      '';
+    };
+
     commands = {
       rebase = ''
         ---
