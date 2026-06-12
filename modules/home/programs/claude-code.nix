@@ -96,7 +96,7 @@ in
 
           Once known, apply the ticket number consistently:
           - **Branch names**: prefix with the ticket number, e.g. `FAL-123-short-description`
-          - **PR title**: prefix with the ticket number in square brackets, e.g. `[FAL-123]: short description`
+          - **PR title**: prefix with the ticket number in square brackets, e.g. `[FAL-123] short description`
           - **PR description**: prepend the ticket in square brackets as a reference on the first line, e.g. `[FAL-123]`
 
           Do not ask again once the ticket number has been given in the current session.

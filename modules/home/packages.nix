@@ -19,7 +19,6 @@
       gh
       gnupg
       go
-      kubernetes-helm
       mariadb.client
       mkcert
       neovim
