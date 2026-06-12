@@ -49,9 +49,7 @@ in
           3. Create and switch to a new branch from the tip of the default branch:
              `git checkout -b <branch-name> origin/<default-branch>`
 
-          Branch names should reflect the type of work using the same prefixes as conventional commits:
-          `feat/`, `fix/`, `docs/`, `refactor/`, `chore/`, `ci/`, `perf/`, `test/`
-          followed by a short kebab-case description, e.g. `feat/add-login-page`.
+          Branch names should be short kebab-case descriptions, e.g. `add-login-page`.
 
           Never commit directly to the default branch.
         '';
@@ -97,8 +95,9 @@ in
           has not been provided, ask the user: "What's the ticket number for this work?"
 
           Once known, apply the ticket number consistently:
-          - **Branch names**: prefix after the type, e.g. `feat/FAL-123-short-description`
-          - **PR description**: prepend the ticket as a reference on the first line, e.g. `FAL-123`
+          - **Branch names**: prefix with the ticket number, e.g. `FAL-123-short-description`
+          - **PR title**: prefix with the ticket number in square brackets, e.g. `[FAL-123]: short description`
+          - **PR description**: prepend the ticket in square brackets as a reference on the first line, e.g. `[FAL-123]`
 
           Do not ask again once the ticket number has been given in the current session.
         '';
